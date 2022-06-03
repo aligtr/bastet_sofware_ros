@@ -1,0 +1,13 @@
+<launch>
+    <arg name="save" value="false"/>
+
+    <node unless="$(arg save)" pkg="map_server" type="map_server" name="map_server" args="">
+        <remap from="map" to="grid_map"/>
+        <rosparam file="~/home/workspace/grid_map.yaml"  command="load"/>
+    </node>
+
+    <node if="$(arg save)" pkg="map_server" type="map_saver" name="map_saver" args="-f map">
+        <remap from="map" to="grid_map"/>
+    </node>
+</launch>
+<!-- rosrun map_server map_saver -f grid_map /map:=/grid_map -->

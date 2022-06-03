@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find bastet_navigation)/launch/bastet_start_navigation.launch" />
+    <include file="$(find bastet_wheel_odometry)/launch/odometry.launch" />
+</launch>

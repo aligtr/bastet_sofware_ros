@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find bastet_camera)/launch/visual_slam.launch" />
+    <node pkg="rviz" type="rviz" name="rviz_camera" args="-d $(find bastet_camera)/rviz/visual_odometry.rviz"/>
+</launch>

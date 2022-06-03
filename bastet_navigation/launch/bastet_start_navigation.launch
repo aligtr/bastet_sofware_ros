@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find bastet_camera)/launch/visual_slam.launch" />
+    <include file="$(find bastet_navigation)/launch/navigation.launch" />
+
+    <node pkg="rviz" type="rviz" name="rviz_navigation" args="-d $(find bastet_navigation)/rviz/navigation.rviz"/>
+</launch>

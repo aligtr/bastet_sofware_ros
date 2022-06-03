@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="bastet_wheel_odometry" type="lower_level_connection" name="lower_level_connection" output="screen">
+	</node>
+	<node pkg="bastet_wheel_odometry" type="odometry.py" name="wheel_odometry" output="screen">
+	</node>
+</launch>

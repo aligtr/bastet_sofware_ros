@@ -1,0 +1,10 @@
+<launch>    
+    <include file="$(find ydlidar_ros)/launch/X2L.launch" />
+
+
+    <node ns="lidar" pkg="tf" type="static_transform_publisher" name="base_link_to_laser4"
+        args="0.2245 0.0 0.2 0.0 0.0  0.0 /base_footprint /laser_frame 40" />
+
+    <node pkg="rviz" type="rviz" name="rviz_lidar" args="-d $(find bastet_lidar)/rviz/lidar.rviz"/>
+</launch>
+  
